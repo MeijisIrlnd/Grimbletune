@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="zZBNQY" name="Grimbletune" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              cppLanguageStandard="20">
+  <MAINGROUP id="CfJxZI" name="Grimbletune">
+    <GROUP id="{540C3F88-768B-0D2B-A0B2-4768BC253064}" name="Resources">
+      <GROUP id="{AACD3C9C-F017-3E9C-A572-2236B5325169}" name="Gnomes">
+        <FILE id="HQ9U5v" name="GnomeA.png" compile="0" resource="1" file="Resources/Gnomes/GnomeA.png"/>
+        <FILE id="sd4SDB" name="GnomeB.png" compile="0" resource="1" file="Resources/Gnomes/GnomeB.png"/>
+      </GROUP>
+    </GROUP>
+    <GROUP id="{0BECAA12-67C4-0A01-882F-064F014F2498}" name="Source">
+      <FILE id="Fu2u0c" name="Macros.h" compile="0" resource="0" file="Source/Macros.h"/>
+      <GROUP id="{C355E1FF-C258-0B2C-91D3-3798F76F4784}" name="DSP">
+        <FILE id="UwXRUs" name="DSPUtils.cpp" compile="1" resource="0" file="Source/DSP/DSPUtils.cpp"/>
+        <FILE id="FfSK5s" name="DSPUtils.h" compile="0" resource="0" file="Source/DSP/DSPUtils.h"/>
+      </GROUP>
+      <GROUP id="{72B16797-9231-C8A5-D0E9-66F09762F930}" name="Audio">
+        <GROUP id="{CFE43EE9-CB6F-4A72-556D-6242D8B5ED85}" name="Effects"/>
+        <FILE id="nCSmlB" name="PostEffects.cpp" compile="1" resource="0" file="Source/Audio/PostEffects.cpp"/>
+        <FILE id="tQXXQd" name="PostEffects.h" compile="0" resource="0" file="Source/Audio/PostEffects.h"/>
+        <FILE id="ofJcfr" name="Tuner.cpp" compile="1" resource="0" file="Source/Audio/Tuner.cpp"/>
+        <FILE id="eSAciB" name="Tuner.h" compile="0" resource="0" file="Source/Audio/Tuner.h"/>
+      </GROUP>
+      <GROUP id="{084C522B-B58E-F301-7BA0-B6E6132FEFBF}" name="UI">
+        <GROUP id="{8C72D823-859A-E7EF-D62C-64B4929538B5}" name="Gnomes">
+          <FILE id="Vf1osh" name="Moods.h" compile="0" resource="0" file="Source/UI/Gnomes/Moods.h"/>
+          <FILE id="RqMJWo" name="UserGnome.cpp" compile="1" resource="0" file="Source/UI/Gnomes/UserGnome.cpp"/>
+          <FILE id="iPI0KK" name="UserGnome.h" compile="0" resource="0" file="Source/UI/Gnomes/UserGnome.h"/>
+        </GROUP>
+        <FILE id="ObEyGo" name="GnomeRenderer.cpp" compile="1" resource="0"
+              file="Source/UI/GnomeRenderer.cpp"/>
+        <FILE id="jjT3Qb" name="GnomeRenderer.h" compile="0" resource="0" file="Source/UI/GnomeRenderer.h"/>
+        <FILE id="e9CkFO" name="TunerReadout.cpp" compile="1" resource="0"
+              file="Source/UI/TunerReadout.cpp"/>
+        <FILE id="f2HHQM" name="TunerReadout.h" compile="0" resource="0" file="Source/UI/TunerReadout.h"/>
+      </GROUP>
+      <FILE id="IkoM5m" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="s5Kwyk" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="Stmx77" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="esvYYZ" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Grimbletune" warningsAreErrors="0"
+                       headerPath="${PROJECT_DIR}../../../../Include"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Grimbletune" warningsAreErrors="0"
+                       headerPath="${PROJECT_DIR}../../../../Include"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../JUCE/modules"/>
+        <MODULEPATH id="pitch_detector" path="../../../../../Program Files/JUCE/UserModules"/>
+        <MODULEPATH id="audio_fft" path="../../../../../Program Files/JUCE/UserModules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="audio_fft" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="pitch_detector" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
